@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO List</title>
+    <link rel="stylesheet" href="Stylesheets/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="addArea">
+            <span class="toDoMsg">Your TO-DO List <i class="fa-solid fa-circle-plus"></i></span>
+        </div>
+        <div class="tasks">
+            <div class="topSection">
+                <div class="dropdown" id="dropdown">
+                    <select name="select" id="select" onchange="selectedOption()">
+                        <option value="Personal" id="personal-selected">Personal</option>
+                        <option value="Business" id="Business-selected">Business</option>
+                        <option value="Other" id="Other-selected">Other</option>
+                    </select>
+                </div>
+                <div class="search-box">
+                    <input type="text" id="search" name="search" placeholder="Search by task name">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <div class="middleSection">
+                <div class="headline">
+                    <h3>Tasks</h3>
+                </div>
+                <div class="personalDetails">
+                    <div class="task-details">
+                        <div class="select-btn">
+                            <h1>T</h1>
+                            <img src="/Assets/Images/green-tick.png" alt="">
+                        </div>
+                        <div class="taskNo-desc">
+                            <span class="taskNo">Task1</span>
+                            <p class="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed ullam,
+                                possimus enim dolorem perspiciatis inventore amet culpa ut rem odit facere cum
+                                exercitationem non vitae sit id nemo. Sit, excepturi?</p>
+                        </div>
+                        <div class="deadline">
+                            <span>3 days 2 hrs to go</span>
+                        </div>
+                        <div class="remove">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="businessDetails dispContent">
+                    <div class="task-details">
+                        <div class="select-btn">
+                            <h1>T</h1>
+                            <img src="/Assets/Images/green-tick.png" alt="">
+                        </div>
+                        <div class="taskNo-desc">
+                            <span class="taskNo">Task2</span>
+                            <p class="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed ullam,
+                                possimus enim dolorem perspiciatis inventore amet culpa ut rem odit facere cum
+                                exercitationem non vitae sit id nemo. Sit, excepturi?</p>
+                        </div>
+                        <div class="deadline">
+                            <span>3 days 2 hrs to go</span>
+                        </div>
+                        <div class="remove">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="otherDetails dispContent">
+                    <div class="task-details">
+                        <div class="select-btn">
+                            <h1>T</h1>
+                            <img src="/Assets/Images/green-tick.png" alt="">
+                        </div>
+                        <div class="taskNo-desc">
+                            <span class="taskNo">Task3</span>
+                            <p class="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed ullam,
+                                possimus enim dolorem perspiciatis inventore amet culpa ut rem odit facere cum
+                                exercitationem non vitae sit id nemo. Sit, excepturi?</p>
+                        </div>
+                        <div class="deadline">
+                            <span>3 days 2 hrs to go</span>
+                        </div>
+                        <div class="remove">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="bottomSection">
+                <div class="col1">
+                    <span>1 item left</span>
+                </div>
+                <div class="col2">
+                    <button onclick="dispAll()" class="bottom-selected">All</button>
+                    <button onclick="completed()"s>Completed</button>
+                    <button onclick="active()">Active</button>
+                    <button onclick="clearCompleted()">Clear Completed</button>
+                </div>
+            </div>
+        </div>
+        <!-- <form action="#"> -->
+        <div class="addForm">
+            <div class="header-info">
+                <h3>Add a new Task</h3>
+                <i class="fa-solid fa-xmark" onclick="closeForm()"></i>
+                
+            </div>
+            <div class="entrySection">
+                <div class="form-element">
+                    <label for="addTask">Add Task</label>
+                    <input type="text" name="addTask" id="addTask" placeholder="What needs to be done ?" required>
+                </div>
+                <div class="form-element">
+                    <label for="description">Description</label>
+                    <input type="text" name="description" id="description" placeholder="Describe your task" required>
+                </div>
+                <div class="form-element makeflex">
+                    <div>
+                        <label for="date">Date</label>
+                        <input type="text" name="date" id="date" placeholder="dd/mm/yyyy" required>
+                    </div>
+                    <div>
+                        <label for="time">Time</label>
+                        <input type="text" name="time" id="time" placeholder="hr:min:ss" required>
+                    </div>
+                </div>
+                <div class="form-element-footer makeflex" id="radios">
+                    <div class="radio-btns">
+                        <input type="radio" id="personal" value="Personal" name="additionalInfo">
+                        <label for="personal">Personal</label>
+                        <input type="radio" id="business" value="Business" name="additionalInfo" checked>
+                        <label for="business">Business</label>
+                        <input type="radio" value="Others" id="others" name="additionalInfo">
+                        <label for="others">Others</label>
+                    </div>
+                    <div class="save-btn">
+                        <button>Save</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- </form> -->
+    </div>
+    <script src="Js/index.js"></script>
+</body>
+
+</html>
+<!-- <img height="50px" width="50px" src="/Assets/Images/green-tick.png" alt=""> -->
